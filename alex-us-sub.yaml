@@ -1,0 +1,20 @@
+proxies:
+  - name: "Alex-美国-38.175.211.20"
+    type: vless
+    server: 38.175.211.20
+    port: 4350
+    uuid: 26906B8A-F1DC-4F5E-AF93-5CE236600DC2
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: "/"
+
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "Alex-美国-38.175.211.20"
+
+rules:
+  - MATCH,PROXY
